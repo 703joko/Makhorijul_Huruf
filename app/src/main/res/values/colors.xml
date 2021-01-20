@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorPrimary">#81b71b</color>
+    <color name="text_color">#151515</color>
     <color name="dark">#37474f</color>
     <color name="colorAccent">#1b4d5e</color>
     <color name="putih">#ffffff</color>

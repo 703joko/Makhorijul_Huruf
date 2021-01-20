@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_main);
-        
+
         mButtonPlay = findViewById(R.id.btn_play);
         mButtonPlay.setText("Play");
         mButtonStop = findViewById(R.id.btn_stop);
@@ -62,11 +64,23 @@ public class MainActivity extends AppCompatActivity {
         mPass = findViewById(R.id.tv_pass);
         mDuration = findViewById(R.id.tv_duration);
         mDue = findViewById(R.id.tv_due);
+        if (!isNetworkConnected()) {
+            Dialog dialog = new Dialog(this);
+            dialog.requestWindowFeature(1);
+            dialog.setContentView(R.layout.atensi);
+            dialog.show();
+            ((Button) dialog.findViewById(R.id.exit)).setOnClickListener(new View.OnClickListener() {
+                @Override // android.view.View.OnClickListener
+                public void onClick(View view) {
+                    dialog.dismiss();
+                }
+            });
+        }
 
         mHandler = new Handler();
         mPlayer = MediaPlayer.create(this, (int) R.raw.nadlom);
         mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override 
+            @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
                 mButtonPlay.setText("Play");
             }
@@ -111,12 +125,11 @@ public class MainActivity extends AppCompatActivity {
         webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setDomStorageEnabled(true);
         webview.loadUrl("file:///android_asset/intro.html");
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle(null);
+        toolbar = findViewById(R.id.toolbar);
         tt = findViewById(R.id.toolbar_title);
         tt.setText(R.string.pengertian);
+        tt.setTextColor(ContextCompat.getColor(this, R.color.text_color));
+        tt.setSelected(true);
         mDrawer = findViewById(R.id.drawer_layout);
         drawerToggle = setupDrawerToggle();
         nvDrawer = findViewById(R.id.nav_view);
@@ -124,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawer.setDrawerListener(drawerToggle);
     }
 
-    private boolean isNetworkConnected(Context context) {
-        ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
+    private boolean isNetworkConnected() {
+        ConnectivityManager connectivityManager = ((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE));
         return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
     }
 
@@ -136,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             final LinearLayout linear = findViewById(R.id.audioControl);
+
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 selectDrawerItem(menuItem);
@@ -178,7 +192,6 @@ public class MainActivity extends AppCompatActivity {
                         nilai();
                         break;
                     case R.id.sub_about /* 2131165343 */:
-
                         Dialog dialog = new Dialog(MainActivity.this);
                         dialog.setContentView(R.layout.about);
                         dialog.show();
@@ -218,15 +231,14 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (back_pressed + ((long) 2000) > System.currentTimeMillis()) {
             super.onBackPressed();
-        } else if (mDrawer.isDrawerOpen(Gravity.RIGHT)) {
-            mDrawer.closeDrawer(Gravity.LEFT);
+        } else if (mDrawer.isDrawerOpen(Gravity.START)) {
+            mDrawer.closeDrawer(Gravity.START);
         } else {
             Toast.makeText(getBaseContext(), "Tekan sekali lagi untuk keluar!", Toast.LENGTH_LONG).show();
             back_pressed = System.currentTimeMillis();
         }
     }
 
-    /* access modifiers changed from: protected */
     @Override
     public void onPostCreate(Bundle bundle) {
         super.onPostCreate(bundle);
