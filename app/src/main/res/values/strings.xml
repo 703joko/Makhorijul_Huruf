@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Makhorijul Huruf</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="pengertian">Pengenalan Huruf Hijaiyah dan Pengertian Makhorijul Huruf</string>
+    <string name="pengenal">Huruf Hijaiyah dan Makhorijul Huruf</string>
+    <string name="jouf">Rongga Mulut ( الجوف )</string>
+    <string name="halqi">Tenggorakan ( الحلق )</string>
+    <string name="bibir">Dua Bibir ( الشَّفَتَيْنِ )</string>
+    <string name="khoisum">Pangkal Hidung ( الخيشوم )</string>
+    <string name="lisan">Lidah ( اللسان )</string>
+    <string name="nasyid">Nasyid Makhorijul</string>
+    <string name="versi">Versi 1.0</string>
+    <string name="about">Tentang Aplikasi</string>
+    <string name="more">Aplikasi lainnya</string>
+    <string name="email">joko.joko.jj@gmail.com</string>
+    <string name="blog">www.joekax703.blogspot.com</string>
+    <string name="deskripsi">Aplikasi tentang makhorijul huruf dengan perincian mengikuti pendapat Imam Kholil bin Ahmad.</string>
+    <string name="jrmod">JrMod.Inc Developer</string>
+    <string name="intro">Pengertian</string>
+    <string name="atensu">Perhatian!</string>
+    <string name="no_inet">Dibutuhkan koneksi internet. \n Aplikasi ini menggunakan koneksi internet untuk memuat Gambar dan memutar Audio. \n Anda tetap bisa menggunakan aplikasi ini tanpa koneksi internet, namun contoh gambar dan contoh suara tidak akan muncul.</string>
+</resources>

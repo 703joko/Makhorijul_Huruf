@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/pengenal">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_p"
+                    android:icon="@drawable/find"
+                    android:title="Pengenalan dan Pengertian" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Pengelompokan Makhroj">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_a"
+                    android:icon="@drawable/find"
+                    android:title="@string/jouf" />
+                <item
+                    android:id="@+id/nav_b"
+                    android:icon="@drawable/find"
+                    android:title="@string/halqi" />
+                <item
+                    android:id="@+id/nav_c"
+                    android:icon="@drawable/find"
+                    android:title="@string/lisan" />
+                <item
+                    android:id="@+id/nav_d"
+                    android:icon="@drawable/find"
+                    android:title="@string/bibir" />
+                <item
+                    android:id="@+id/nav_e"
+                    android:icon="@drawable/find"
+                    android:title="@string/khoisum" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Lain lain">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_f"
+                    android:title="@string/nasyid" />
+                <item
+                    android:id="@+id/sub_thanks"
+                    android:title="@string/more" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/about">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/sub_about"
+                    android:title="@string/about" />
+            </group>
+        </menu>
+    </item>
+</menu>

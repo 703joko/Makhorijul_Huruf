@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: white; /*Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+    margin: auto;
+    display: block;
+    background-color: white;
+    }
+    
+    /* Caption of Modal Image */
+    #caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #f00;
+    padding: 10px 0;
+    }
+    
+    /* Add Animation */
+    .modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+    .modal-content {
+    width: 780px;
+    }
+    }
+    </style>
+    </head>
+ <body> 
+<p>Al - Jauf (الجَوْفُ) ialah dalam bahasa Indonesia berarti rongga mulut. Pengertian rongga mulut sendiri yakni celah panjang yang berada di belakang tenggorokan sampai ke mulut.
+<br>yang keluar dari Jauf huruf huruf mad yaitu (<span dir="RTL" lang="AR-SA" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 14.0pt; mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-bidi-theme-font: minor-bidi; mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">
+ا ي و</span>).
+<br>1. Alif memanjangkan fathah.
+<br>2. ya’ memanjangkan kasroh.
+<br>3. wauw memanjangkan dhommah.</p>
+<p>Vokal panjang pada setiap mad yakni bunyi “aa”, “ii” dan “uu” itu mahrojnya dari rongga mulut dan berakhirnya suara di udara itu di mulut.
+<br> Contohnya: <span dir="RTL" lang="AR-SA" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 18.0pt; mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-bidi-theme-font: minor-bidi; mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">
+نُوْحِيْهَا</span>
+<center><audio controls> <source src="https://github.com/703joko/MakhorijulHuruf/blob/master/suara/mad.mp3?raw=true" /> </audio></center>
+<br>Sekarang kita lihat gambar berikut ini. 
+<center><img id="myImg" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/jouf.png" alt="gambar makhroj jauf" height="140px" /> </center>
+<br>semua makhroj jauf berakhir di udara dan posisi lidah sesuaikan seperti pada gambar.
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+    }
+    </script>
+</p>
+</body> 
+</html>

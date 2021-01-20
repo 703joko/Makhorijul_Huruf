@@ -1,0 +1,250 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: white; /*Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+    margin: auto;
+    display: block;
+    background-color: white;
+    }
+    
+    /* Caption of Modal Image */
+    #caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #f00;
+    padding: 10px 0;
+    }
+    
+    /* Add Animation */
+    .modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+    .modal-content {
+    width: 680px;
+    }
+    }
+    </style>
+    </head>
+<body>
+<p>Al-Halqi (اْلحَلْقُ) atau berarti tenggorokan.
+<br>Makhroj Halqi dibagi dalam tiga bagian :
+<br><sub>1.<font color="red"> Aqshol Halqi  (أقصى الْحَلْقِ)</font>  atau Pangkal Tenggorokan (Tenggorokan bagian bawah), Hurufnya (ء) dan (ه) .
+<br>2.<font color="red"> Wasthol Halqi (وَسْطَ الْحَلْقِ)</font> atau Tengah Tenggorokan ( Tenggorokan bagian tengah), Hurufnya (ع) dan (ح) .
+<br>3.<font color="red"> Adnal Halqi (أَدْنَى الْحَلْقِ)</font> atau Puncak Tenggorokan ( Tenggorokan bagian atas), Hurufnya (خ) dan (غ) .</sub>
+<br>
+<p>Untuk lebih jelasnya silahkan perhatikan warna ungu pada gambar :
+<br><center><img id="myImg" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/halqi.png" alt="gambar makhroj halqi" height="140px"></center>
+<!-- The Modal -->
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+    }
+    </script>
+<br>Contoh pelafadzan :
+    <br><center>
+    <b onclick="anuku('a');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    غ</button>
+    </b>
+    <b onclick="anuku('b');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    خ</button>
+    </b>
+    <b onclick="anuku('c');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt;width: 50px;">
+    ع</button>
+    </b>
+    <b onclick="anuku('d');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt;width: 50px;">
+    ح</button>
+    </b>
+    <b onclick="anuku('e');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt;width: 50px;">
+    ه‍</button>
+    </b>
+    <b onclick="anuku('f');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt;width: 50px;">
+    ء</button>
+    </b></center>
+    <script type="text/javascript">
+    var Aaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/ghoin.mp3?raw=true');
+    var Baudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/khoo.mp3?raw=true');
+    var Caudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/ain.mp3?raw=true');
+    var Daudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/khaa.mp3?raw=true');
+    var Eaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/haa.mp3?raw=true');
+    var Faudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/hamzah.mp3?raw=true');
+    
+    function anuku(hei){
+    if(hei == 'a'){
+    Aaudio.play();
+    Baudio.currentTime = 0;
+    Baudio.pause();
+    Caudio.currentTime = 0;
+    Caudio.pause();
+    Daudio.currentTime = 0;
+    Daudio.pause();
+    Eaudio.currentTime = 0;
+    Eaudio.pause();
+    Faudio.currentTime = 0;
+    Faudio.pause();
+    } else if(hei == 'b'){
+    Baudio.play();
+    Aaudio.pause();
+    Aaudio.currentTime = 0;
+    Caudio.pause();
+    Caudio.currentTime = 0;
+    Daudio.pause();
+    Daudio.currentTime = 0;
+    Eaudio.currentTime = 0;
+    Eaudio.pause();
+    Faudio.currentTime = 0;
+    Faudio.pause();
+    } else if(hei == 'c'){
+    Caudio.play();
+    Aaudio.pause();
+    Aaudio.currentTime = 0;
+    Baudio.pause();
+    Baudio.currentTime = 0;
+    Daudio.pause();
+    Daudio.currentTime = 0;
+    Eaudio.currentTime = 0;
+    Eaudio.pause();
+    Faudio.currentTime = 0;
+    Faudio.pause();
+    } else if(hei == 'd'){
+    Daudio.play();
+    Aaudio.pause();
+    Aaudio.currentTime = 0;
+    Baudio.pause();
+    Baudio.currentTime = 0;
+    Caudio.pause();
+    Caudio.currentTime = 0;
+    Eaudio.currentTime = 0;
+    Eaudio.pause();
+    Faudio.currentTime = 0;
+    Faudio.pause();
+    } else if(hei == 'e'){
+    Eaudio.play();
+    Aaudio.pause();
+    Aaudio.currentTime = 0;
+    Baudio.pause();
+    Baudio.currentTime = 0;
+    Caudio.pause();
+    Caudio.currentTime = 0;
+    Daudio.currentTime = 0;
+    Daudio.pause();
+    Faudio.currentTime = 0;
+    Faudio.pause();
+    }else if(hei == 'f'){
+    Faudio.play();
+    Aaudio.pause();
+    Aaudio.currentTime = 0;
+    Baudio.pause();
+    Baudio.currentTime = 0;
+    Caudio.pause();
+    Caudio.currentTime = 0;
+    Eaudio.currentTime = 0;
+    Eaudio.pause();
+    Daudio.currentTime = 0;
+    Daudio.pause();
+    }
+    }
+    </script>
+    
+</p>
+</p>
+</body> 
+</html>

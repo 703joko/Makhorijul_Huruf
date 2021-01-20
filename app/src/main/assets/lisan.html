@@ -1,0 +1,1013 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    /* The Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+.modal4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+.modal5 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+.modal6 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+.modal7 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+.modalZ {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(e,e,e); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+    margin: auto;
+    display: block;
+    background-color: white;
+    height: 300px;
+    }
+    
+    /* Caption of Modal Image */
+    #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    }
+    
+    /* Add Animation */
+    .modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* The Close Button */
+    .closeZ {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .closeZ:hover,
+    .closeZ:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    /* The Close Button */
+    .close2 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close2:hover,
+    .close2:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    /* The Close Button */
+    .close3 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close3:hover,
+    .close3:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    /* The Close Button */
+    .close4 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close4:hover,
+    .close4:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    /* The Close Button */
+    .close5 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close5:hover,
+    .close5:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    /* The Close Button */
+    .close6 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close6:hover,
+    .close6:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    /* The Close Button */
+    .close7 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close7:hover,
+    .close7:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    </style>
+    </head>
+<body>
+<p>Al-Lisan (اللِّسَانُ) artinya lidah. 
+<br>Kita beri nama untuk bagian-bagian lidah berikut agar memudahkan pemahaman kita.
+<br><img src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/lidah.png" alt="gambar lidah" width="150px">
+<br><script language="javascript"> 
+function togglex() {
+var ele = document.getElementById("toggleTextx");
+var text = document.getElementById("displayTextx");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u></u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u></u></font>';
+}
+} 
+</script> <a href="javascript:togglex();" id="displayTextx"><font color="0000ff"><u></u></font></a>
+<div style="display: none" id="toggleTextx">
+</div>
+
+<br>Dan untuk makhroj lisan sendiri dikelompokkan menjadi 7 bagian, yaitu :
+<font color="red">
+<br>1. Lahawiyyah (لهويّة):
+<script language="javascript"> 
+function toggle() {
+var ele = document.getElementById("toggleText");
+var text = document.getElementById("displayText");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u>Buka</u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u>Tutup</u></font>';
+}
+} 
+</script> <a href="javascript:toggle();" id="displayText"><font color="0000ff"><u>Buka</u></font></a>
+<div style="display: none" id="toggleText">
+<font color="0000ff">
+<table border="2">
+<tr>
+<td>
+<div style="padding-left:5px; padding-top:5px;">
+Lahawiyah dalam bahasa Indonesia artinya tekak.
+<br>Huruf dengan makhroj ini ada dua yaitu :
+<br><b style="font-size: 12px;">a. Qof (ق): Pangkal lidah mengenai langit-langit yang di atasnya.</b>
+<br><b style="font-size: 12px;">b. Kaf (ك): Pangkal lidah yang agak depan mengenai langit-langit.</b>
+
+<center><p>Lihat warna biru pada gambar
+<br><img id="myImg" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/qoka.png" alt="gambar lahawiyah" height="140px"></center>
+<div id="myModal" class="modal">
+    <img class="modal-content" id="img01">
+    <span class="close">&times;</span>
+</div>
+    
+<br>Contoh pengucapan:
+<center>
+<b onclick="anuku('a');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ق</button>
+</b>
+<b onclick="anuku('b');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    ك</button>
+</b>
+<script type="text/javascript">
+var Aaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/qof.mp3?raw=true');
+var Baudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/kaf.mp3?raw=true');
+
+function anuku(hei){
+if(hei == 'a'){
+Aaudio.play();
+Baudio.pause();
+Baudio.currentTime = 0;
+} else if(hei == 'b'){
+Baudio.play();
+Aaudio.pause();
+Aaudio.currentTime = 0;
+}
+}
+</script>
+</center>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</font>
+</div>
+
+<br>2. Jambiyyah (جنبيّة):
+<script language="javascript"> 
+function toggle2() {
+var ele = document.getElementById("toggleText2");
+var text = document.getElementById("displayText2");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u>Buka</u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u>Tutup</u></font>';
+}
+} 
+</script> <a href="javascript:toggle2();" id="displayText2"><font color="0000ff"><u>Buka</u></font></a>
+<div style="display: none" id="toggleText2">
+<font color="0000ff">
+<table border="2">
+<td>
+<div style="padding-left:5px; padding-top:5px;">
+Jambiyah dalam bahasa Indonesia artinya tepi lidah.
+<br>Huruf dengan makhroj ini ada satu, yaitu :
+<br><b style="font-size: 12px;">a. Dlood (ض): Sisi (kanan kiri) lidah mengenai sisi gigi geraham atas sebelah dalam.</b>
+<center><p>Lihat warna biru pada gambar
+<br><img id="myImg2" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/dlood.png" alt="gambar jambiyah" height="140px"></center>
+<div id="myModal2" class="modal2">
+    <img class="modal-content" id="img02">
+    <span2 class="close2">&times;</span2>
+</div>
+<br>Contoh pengucapan:
+<center>
+<b onclick="anuku2('aa');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ض</button>
+</b>
+<script type="text/javascript">
+var aAaudiro = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/dlood.mp3?raw=true');
+
+function anuku2(hei){
+if(hei == 'aa'){
+aAaudiro.play();
+}
+}
+</script>
+</center>
+</p>
+</div>
+</td>
+</table>
+</font>
+</div>
+
+<br>3. Syajariyyah (شجريّة):
+<script language="javascript"> 
+function toggle3() {
+var ele = document.getElementById("toggleText3");
+var text = document.getElementById("displayText3");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u>Buka</u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u>Tutup</u></font>';
+}
+} 
+</script> <a href="javascript:toggle3();" id="displayText3"><font color="0000ff"><u>Buka</u></font></a>
+<div style="display: none" id="toggleText3">
+<font color="0000ff">
+<table border="2">
+<tr>
+<td>
+<div style="padding-left:5px; padding-top:5px;">
+Syajariyah atau disebut juga dengan tengah lidah.
+<br>Huruf dengan makhroj ini ada tiga yaitu :
+<br><b style="font-size: 12px;">a. Syin (ش): Tengah lidah  bagian depan mengenai langit-langit.</b>
+<br><b style="font-size: 12px;">b. Ya' (ي): Tengah lidah bagian belakang mengenai langit-langit.</b>
+<br><b style="font-size: 12px;">c. Jim (ج): Tengah lidah bagian tengah mengenai langit-langit.</b>
+
+<center><p>Lihat warna biru pada gambar
+<br><img id="myImg3" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/tengahlidah.png" alt="gambar syajariyah" height="140px"></center>
+
+<div id="myModal3" class="modal3">
+    <img class="modal-content" id="img03">
+    <span3 class="close3">&times;</span3>
+</div>
+<br>Contoh pengucapan:
+<center>
+<b onclick="anuku3('ax');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ش</button>
+</b>
+<b onclick="anuku3('bx');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    ي</button>
+</b>
+<b onclick="anuku3('cx');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ج</button>
+</b>
+
+<script type="text/javascript">
+var xAaudiox = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/syiin.mp3?raw=true');
+var xBaudiox = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/yaa.mp3?raw=true');
+var xCaudiox = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/jiim.mp3?raw=true');
+
+function anuku3(hei){
+if(hei == 'ax'){
+xAaudiox.play();
+xBaudiox.pause();
+xBaudiox.currentTime = 0;
+xCaudiox.pause();
+xCaudiox.currentTime = 0;
+} else if(hei == 'bx'){
+xBaudiox.play();
+xAaudiox.pause();
+xAaudiox.currentTime = 0;
+xCaudiox.pause();
+xCaudiox.currentTime = 0;
+}else if(hei == 'cx'){
+xCaudiox.play();
+xAaudiox.pause();
+xAaudiox.currentTime = 0;
+xBaudiox.pause();
+xBaudiox.currentTime = 0;
+
+}
+}
+</script>
+</center>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</font>
+</div>
+
+<br>4. Nath'iyyah (نطعيّة):
+<script language="javascript"> 
+function toggle4() {
+var ele = document.getElementById("toggleText4");
+var text = document.getElementById("displayText4");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u>Buka</u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u>Tutup</u></font>';
+}
+} 
+</script> <a href="javascript:toggle4();" id="displayText4"><font color="0000ff"><u>Buka</u></font></a>
+<div style="display: none" id="toggleText4">
+<font color="0000ff">
+<table border="2">
+<tr>
+<td>
+<div style="padding-left:5px; padding-top:5px;">
+Nath'iyah atau disebut juga dengan langit-langit mulut.
+<br>Huruf dengan makhroj ini ada tiga yaitu :
+<br><b style="font-size: 12px;">a. Tho' (ط): Punggung ujung lidah mengenai pangkal gigi seri pertama atas (paling belakang) sambil mengenai gusinya.</b>
+<br><b style="font-size: 12px;">b. Dal (د): Punggung ujung lidah mengenai pangkal gigi seri pertama atas (agak kedepan) sambil mengenai gusinya.</b>
+<br><b style="font-size: 12px;">c. Ta' (ت): Punggung ujung lidah mengenai pangkal gigi seri pertama atas (bagian tengah) sambil mengenai gusinya.</b>
+
+<center><p>Lihat warna biru pada gambar
+<br><img id="myImg4" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/thodalta.png" alt="gambar nath'iyah" height="140px"></center>
+<div id="myModal4" class="modal4">
+    <img class="modal-content" id="img04">
+    <span4 class="close4">&times;</span4>
+</div>
+
+<br>Contoh pengucapan:
+<center>
+<b onclick="anuku4('ax');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ت</button>
+</b>
+<b onclick="anuku4('bx');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    د</button>
+</b>
+<b onclick="anuku4('cx');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ط</button>
+</b>
+
+<script type="text/javascript">
+var xAaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/taa.mp3?raw=true');
+var xBaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/dal.mp3?raw=true');
+var xCaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/thoo.mp3?raw=true');
+
+function anuku4(hei){
+if(hei == 'ax'){
+xAaudio.play();
+xBaudio.pause();
+xBaudio.currentTime = 0;
+xCaudio.pause();
+xCaudio.currentTime = 0;
+} else if(hei == 'bx'){
+xBaudio.play();
+xAaudio.pause();
+xAaudio.currentTime = 0;
+xCaudio.pause();
+xCaudio.currentTime = 0;
+}else if(hei == 'cx'){
+xCaudio.play();
+xAaudio.pause();
+xAaudio.currentTime = 0;
+xBaudio.pause();
+xBaudio.currentTime = 0;
+
+}
+}
+</script>
+</center>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</font>
+</div>
+
+<br>5. Dzalqiyyah (ذلقيّة):
+<script language="javascript"> 
+function toggle5() {
+var ele = document.getElementById("toggleText5");
+var text = document.getElementById("displayText5");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u>Buka</u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u>Tutup</u></font>';
+}
+} 
+</script> <a href="javascript:toggle5();" id="displayText5"><font color="0000ff"><u>Buka</u></font></a>
+<div style="display: none" id="toggleText5">
+<font color="0000ff">
+<table border="2">
+<tr>
+<td>
+<div style="padding-left:5px; padding-top:5px;">
+Dzalqiyah atau disebut juga dengan pinggir/tepi lidah.
+<br>Huruf dengan makhroj ini ada tiga yaitu :
+<br><b style="font-size: 12px;">a. Nun (ن): Ujung lidah mengenai gusi gigi seri pertama yang atas.</b>
+<br><b style="font-size: 12px;">b. Lam (ل): Sisi bagian depan lidah mengenai gusi gigi depan.</b>
+<br><b style="font-size: 12px;">c. Ro' (ر): Ujung lidah agak kedalam mengenai gusi gigi seri pertama.</b>
+
+<center><p>Lihat warna biru pada gambar
+<br><img id="myImg5" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/lamnunro.png" alt="gambar makhroj dzalqiyah" height="140px"></center>
+<div id="myModal5" class="modal5">
+    <img class="modal-content" id="img05">
+    <span5 class="close5">&times;</span5>
+</div>
+
+<br>Contoh pengucapan:
+<center>
+<b onclick="anuku5('axs');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ر</button>
+</b>
+<b onclick="anuku5('bxs');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    ل</button>
+</b>
+<b onclick="anuku5('cxs');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ن</button>
+</b>
+
+<script type="text/javascript">
+var sxAaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/roo.mp3?raw=true');
+var sxBaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/lam.mp3?raw=true');
+var sxCaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/nun.mp3?raw=true');
+
+function anuku5(hei){
+if(hei == 'axs'){
+sxAaudio.play();
+sxBaudio.pause();
+sxBaudio.currentTime = 0;
+sxCaudio.pause();
+sxCaudio.currentTime = 0;
+} else if(hei == 'bxs'){
+sxBaudio.play();
+sxAaudio.pause();
+sxAaudio.currentTime = 0;
+sxCaudio.pause();
+sxCaudio.currentTime = 0;
+}else if(hei == 'cxs'){
+sxCaudio.play();
+sxAaudio.pause();
+sxAaudio.currentTime = 0;
+sxBaudio.pause();
+sxBaudio.currentTime = 0;
+
+}
+}
+</script>
+</center>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</font>
+</div>
+
+<br>6. Litsawiyyah (لثويّة):
+<script language="javascript"> 
+function toggle6() {
+var ele = document.getElementById("toggleText6");
+var text = document.getElementById("displayText6");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u>Buka</u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u>Tutup</u></font>';
+}
+} 
+</script> <a href="javascript:toggle6();" id="displayText6"><font color="0000ff"><u>Buka</u></font></a>
+<div style="display: none" id="toggleText6">
+<font color="0000ff">
+<table border="2">
+<tr>
+<td>
+<div style="padding-left:5px; padding-top:5px;">
+Litsawiyah atau disebut juga dengan gusi.
+<br>Huruf dengan makhroj ini ada tiga yaitu :
+<br><b style="font-size: 12px;">a. Dzho' (ظ): Ujung lidah agak menjauh dari ujung dua gigi seri atas (lebih kedalam).</b>
+<br><b style="font-size: 12px;">b. Dzal (ذ): Ujung lidah agak mendekat pada ujung dua gigi seri atas (agak kedalam).</b>
+<br><b style="font-size: 12px;">c. Tsa' (ث): Ujung lidah semakin mendekat pada ujung dua gigi seri atas (lebih keluar).</b>
+
+<center><p>Lihat warna biru pada gambar
+<br><img id="myImg6" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/dzhodzaltsa.png" alt="gambar makhroj Litsawiyah" height="140px"></center>
+<div id="myModal6" class="modal6">
+    <img class="modal-content" id="img06">
+    <span6 class="close6">&times;</span6>
+</div>
+
+<br>Contoh pengucapan:
+<center>
+<b onclick="anuku6('as');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ظ</button>
+</b>
+<b onclick="anuku6('bs');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    ذ</button>
+</b>
+<b onclick="anuku6('cs');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ث</button>
+</b>
+
+<script type="text/javascript">
+var sAaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/dhoo.mp3?raw=true');
+var sBaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/dzal.mp3?raw=true');
+var sCaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/tsaa.mp3?raw=true');
+
+function anuku6(hei){
+if(hei == 'as'){
+sAaudio.play();
+sBaudio.pause();
+sBaudio.currentTime = 0;
+sCaudio.pause();
+sCaudio.currentTime = 0;
+} else if(hei == 'bs'){
+sBaudio.play();
+sAaudio.pause();
+sAaudio.currentTime = 0;
+sCaudio.pause();
+sCaudio.currentTime = 0;
+}else if(hei == 'cs'){
+sCaudio.play();
+sAaudio.pause();
+sAaudio.currentTime = 0;
+sBaudio.pause();
+sBaudio.currentTime = 0;
+
+}
+}
+</script>
+</center>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</font>
+</div>
+
+<br>7. Asaliyyah (اسليّة):
+<script language="javascript"> 
+function toggle7() {
+var ele = document.getElementById("toggleText7");
+var text = document.getElementById("displayText7");
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = '<font color="0000ff"><u>Buka</u></font>';
+}
+else {
+ele.style.display = "block";
+text.innerHTML = '<font color="0000ff"><u>Tutup</u></font>';
+}
+} 
+</script> <a href="javascript:toggle7();" id="displayText7"><font color="0000ff"><u>Buka</u></font></a>
+<div style="display: none" id="toggleText7">
+<font color="0000ff">
+<table border="2">
+<tr>
+<td>
+<div style="padding-left:5px; padding-top:5px;">
+Assaliyah atau disebut juga dengan ujung lidah.
+<br>Huruf dengan makhroj ini ada tiga yaitu :
+<br><b style="font-size: 12px;">a. Shood (ص): Ujung lidah agak menjauh dari dua gigi seri atas dan bawah.</b>
+<br><b style="font-size: 12px;">b. Sin (س): Ujung lidah agak mendekat pada dua gigi seri atas dan bawah.</b>
+<br><b style="font-size: 12px;">c. Zay (ز): Ujung lidah semakin mendekat pada ujung dua gigi seri atas dan bawah.</b>
+
+<center><p>Lihat warna biru pada gambar
+<br><img id="myImg7" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/shosinzi.png" alt="gambar makhroj Assaliyah" height="140px"></center>
+<div id="myModal7" class="modal7">
+    <img class="modal-content" id="img07">
+    <span7 class="close7">&times;</span7>
+</div>
+
+<br>Contoh pengucapan:
+<center>
+<b onclick="anuku7('ats');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ص</button>
+</b>
+<b onclick="anuku7('bts');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+    س</button>
+</b>
+<b onclick="anuku7('cts');">
+    <button align="center" class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;font-size: 24.0pt; width: 50px;">
+  ز</button>
+</b>
+<script type="text/javascript">
+var tsAaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/shood.mp3?raw=true');
+var tsBaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/siin.mp3?raw=true');
+var tsCaudio = new Audio('https://github.com/703joko/MyTajwidData/blob/master/suara/zay.mp3?raw=true');
+
+function anuku7(hei){
+if(hei == 'ats'){
+tsAaudio.play();
+tsBaudio.pause();
+tsBaudio.currentTime = 0;
+tsCaudio.pause();
+tsCaudio.currentTime = 0;
+} else if(hei == 'bts'){
+tsBaudio.play();
+tsAaudio.pause();
+tsAaudio.currentTime = 0;
+tsCaudio.pause();
+tsCaudio.currentTime = 0;
+}else if(hei == 'cts'){
+tsCaudio.play();
+tsAaudio.pause();
+tsAaudio.currentTime = 0;
+tsBaudio.pause();
+tsBaudio.currentTime = 0;
+
+}
+}
+</script>
+</center>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</font>
+</div>
+
+</font></p>
+<p>Untuk Meringkas penempatan huruf pada lidah, perhatikan gambar berikut :
+<center><br><img id="myImgZ" src="https://raw.githubusercontent.com/703joko/MakhorijulHuruf/master/gambar/lisaniyyah.jpg" height="140px">
+</center><div id="myModalZ" class="modalZ">
+    <img class="modal-content" id="img0Z">
+    <spanZ class="closeZ">&times;</spanZ>
+</div>
+
+</p>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    var modal2 = document.getElementById('myModal2');
+    var modal3 = document.getElementById('myModal3');
+    var modal4 = document.getElementById('myModal4');
+    var modal5 = document.getElementById('myModal5');
+    var modal6 = document.getElementById('myModal6');
+    var modal7 = document.getElementById('myModal7');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var modalZ = document.getElementById('myModalZ');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var imgZ = document.getElementById('myImgZ');
+    var modalImgZ = document.getElementById("img0Z");
+    var img2 = document.getElementById('myImg2');
+    var modalImg2 = document.getElementById("img02");
+    var img3 = document.getElementById('myImg3');
+    var modalImg3 = document.getElementById("img03");
+    var img4 = document.getElementById('myImg4');
+    var modalImg4 = document.getElementById("img04");
+    var img5 = document.getElementById('myImg5');
+    var modalImg5 = document.getElementById("img05");
+    var img6 = document.getElementById('myImg6');
+    var modalImg6 = document.getElementById("img06");
+    var img7 = document.getElementById('myImg7');
+    var modalImg7 = document.getElementById("img07");
+    
+    
+    imgZ.onclick = function(){
+    modalZ.style.display = "block";
+    modalImgZ.src = this.src;
+    
+    }
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    
+    }
+    img2.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = this.src;
+    
+    }
+    img3.onclick = function(){
+    modal3.style.display = "block";
+    modalImg3.src = this.src;
+    }
+    img4.onclick = function(){
+    modal4.style.display = "block";
+    modalImg4.src = this.src;
+    }
+    img5.onclick = function(){
+    modal5.style.display = "block";
+    modalImg5.src = this.src;
+    }
+    img6.onclick = function(){
+    modal6.style.display = "block";
+    modalImg6.src = this.src;
+    }
+    img7.onclick = function(){
+    modal7.style.display = "block";
+    modalImg7.src = this.src;
+    }
+    
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close2")[0];
+    var span3 = document.getElementsByClassName("close3")[0];
+    var span4 = document.getElementsByClassName("close4")[0];
+    var span5 = document.getElementsByClassName("close5")[0];
+    var span6 = document.getElementsByClassName("close6")[0];
+    var span7 = document.getElementsByClassName("close7")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    }
+    var spanZ = document.getElementsByClassName("closeZ")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    spanZ.onclick = function() { 
+    modalZ.style.display = "none";
+    }
+    span2.onclick = function() { 
+    modal2.style.display = "none";
+    }
+    span3.onclick = function() { 
+    modal3.style.display = "none";
+    }
+    span4.onclick = function() { 
+    modal4.style.display = "none";
+    }
+    span5.onclick = function() { 
+    modal5.style.display = "none";
+    }
+    span6.onclick = function() { 
+    modal6.style.display = "none";
+    }
+    span7.onclick = function() { 
+    modal7.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }if (event.target == modal2) {
+    modal2.style.display = "none";
+    }if (event.target == modal3) {
+    modal3.style.display = "none";
+    }if (event.target == modal4) {
+    modal4.style.display = "none";
+    }if (event.target == modal5) {
+    modal5.style.display = "none";
+    }if (event.target == modal6) {
+    modal6.style.display = "none";
+    }if (event.target == modal7) {
+    modal7.style.display = "none";
+    }
+    if (event.target == modalZ) {
+    modalZ.style.display = "none";
+    }
+    }
+    
+    </script>
+</body> 
+</html>
